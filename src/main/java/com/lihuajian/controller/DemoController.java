@@ -8,12 +8,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
-@RequestMapping("/books")
+@RequestMapping("/index")
 public class DemoController {
 
     @ResponseBody
     @RequestMapping(value = "/session", method = RequestMethod.GET)
     public String getSessionId(HttpServletRequest request) {
         return request.getSession().getId();
+    }
+
+    @RequestMapping("demo")
+    public String demo(){
+        return "demo";
     }
 }

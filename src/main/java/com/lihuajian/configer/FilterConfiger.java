@@ -14,7 +14,7 @@ import java.io.IOException;
 @WebFilter(filterName = "securityFilter", urlPatterns = "/*")
 public class FilterConfiger implements Filter {
 
-    private String url = "login,index,session";
+    private String url = "login,index,session,upload";
 
     private String urlArray[];
 

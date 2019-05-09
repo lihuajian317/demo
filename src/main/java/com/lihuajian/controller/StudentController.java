@@ -2,6 +2,7 @@ package com.lihuajian.controller;
 
 import com.lihuajian.entity.Student;
 import com.lihuajian.service.StudentService;
+import com.lihuajian.utils.JsonUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -28,8 +29,9 @@ public class StudentController {
      * @return 单条数据
      */
     @GetMapping("selectOne")
-    public Student selectOne(Integer id) {
-        return this.studentService.queryById(id);
+    public String selectOne(Integer id) {
+        Student student=this.studentService.queryById(id);
+        return JsonUtils.toJson(student);
     }
 
 }
