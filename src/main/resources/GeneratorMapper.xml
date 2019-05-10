@@ -3,6 +3,7 @@
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
+
 <generatorConfiguration>
 
     <!-- 指定连接数据库的JDBC驱动包所在位置，指定到你本机的完整路径 -->
@@ -34,6 +35,18 @@
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
+        <!--生成service,serviceImpl-->
+        <!--<javaServiceGenerator targetPackage="com.lihuajian.service" targetProject="src/main/java">
+            <property name="enableSubPackages" value="false"/>
+        </javaServiceGenerator>-->
+
+
+
+        <!--生成controller-->
+        <!--<javaControllerGenerator targetPackage="com.lihuajian.controller" targetProject="src/main/java">
+            <property name="superClass" value="com.lihuajian.controller"></property>
+        </javaControllerGenerator>-->
+
         <!-- 生成MyBatis的Mapper接口类文件,targetPackage指定Mapper接口类的包名， targetProject指定生成的Mapper接口放在eclipse的哪个工程下面 -->
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.lihuajian.mappers" targetProject="src/main/java">
             <property name="enableSubPackages" value="false"/>
@@ -42,6 +55,22 @@
         <!-- 数据库表名及对应的Java模型类名，tableName：数据库的表名，domainObjectName：实体类的名字 -->
         <table tableName="user"
                domainObjectName="User"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"/>
+
+        <table tableName="student"
+               domainObjectName="Student"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false"/>
+
+        <table tableName="classes"
+               domainObjectName="Classes"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"
