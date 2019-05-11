@@ -64,8 +64,8 @@ sftp:
 
 mybatis:
   # mapper 文件路径
-  #mapper-locations: classpath*:**/mapper/*Dao.xml
-  mapper-locations: classpath*:**/mappers/*Mapper.xml
+  mapper-locations: classpath*:**/mapper/*Dao.xml
+  #mapper-locations: classpath*:**/mappers/*Mapper.xml
   # 实体类映射文件的地址
   type-aliases-package: com.lihuajian.entity
   # 配置文件地址
